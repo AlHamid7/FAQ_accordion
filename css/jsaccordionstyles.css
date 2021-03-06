@@ -1,0 +1,262 @@
+/* General Styling */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#af67e9, #6565e7);
+}
+
+.card {
+  background-color: white;
+  overflow: hidden;
+  width: 90%;
+  /* min-height: 70vh; */
+  border-radius: 20px;
+  margin-top: 35%;
+  padding-bottom: 20px;
+}
+
+hr{
+  width: 90%;
+  margin-left: 5%;
+  border-width: 1px 0 0 0;
+  border-color: #e7e7e9;
+
+}
+
+/* Image Style */
+.mobile-illustration {
+  z-index: 1;
+  width: 80%;
+  position: absolute;
+  left: 5%;
+  top: 2%;
+}
+
+.mobile-background {
+  width: 80%;
+  position: relative;
+  left: 10%;
+}
+
+.desktop-images{
+  display: none;
+}
+
+.box {
+  display: none;
+}
+
+
+/* Heading Styling */
+
+h1{
+  text-align: center;
+}
+
+/* Button Styling  */
+.accordion {
+  width: 100%;
+  padding: 20px 5%;
+  background-color: white;
+  text-align: left;
+  font-family: inherit;
+  font-weight: 400;
+  color: #4a4b5e;
+  border: none;
+}
+
+.accordion img {
+  float: right;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.imgActive {
+  transform: rotate(180deg);
+}
+
+.accordion:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.accordion:focus{
+  outline: none;
+  font-weight: 700;
+}
+
+/* Answer Panel  */
+.panel {
+  width: 80%;
+  padding-left: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.panel p {
+  font-size: 0.8rem;
+  position: relative;
+  top: 10%;
+  transform: translateY(-20%);
+  color: #787887;
+}
+
+.active {
+  max-height: 50px;
+  padding-bottom: 5px;
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/* Small Tablet Breakpoint  */
+
+@media screen and (min-width: 550px) {
+
+/* Image Styling  */
+  .mobile-illustration{
+    top: 2%;
+  }
+
+  /* Button Styling */
+
+  .accordion {
+    font-size: 1rem;
+    padding: 20px 5%;
+  }
+
+  .panel {
+    padding-left: 5%;
+  }
+
+  .panel p{
+    font-size: 0.9rem;
+  }
+
+}
+
+/* Tablet Breakpoint */
+
+@media screen and (min-width: 760px) {
+
+  .mobile-illustration {
+    width: 60%;
+    left: 17%;
+  }
+
+  .mobile-background {
+    width: 60%;
+    left: 20%;
+  }
+
+  .card{
+    margin-top: 25%;
+  }
+
+}
+
+/* Laptop breakpoint */
+
+@media screen and (min-width: 1023px) {
+
+  .wrapper{
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Image Styling */
+
+  .mobile-illustration, .mobile-background {
+    display: none;
+  }
+
+  .desktop-images{
+    display: block;
+    height: 100%;
+  }
+
+  .box {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 37%;
+    left: 1%;
+  }
+
+  .desktop-illustration {
+    position: relative;
+    right: 15%;
+    top: 5%;
+    z-index: 1;
+  }
+
+  .bg-desktop {
+    position: relative;
+    right:  135%;
+    bottom: 48%;
+  }
+
+  /* Card Styling */
+
+  h1 {
+    text-align: left;
+    padding-left: 5%;
+    margin-top: 40px;
+  }
+
+  .card {
+    margin: 0;
+    min-height: 50vh;
+    max-height: 65vh;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+
+}
+
+/* Laptop and larger Viewport */
+
+@media screen and (min-width: 1439px) {
+
+  h1 {
+    margin-top: 70px;
+  }
+  .card {
+    width: 65vw;
+    max-height: 55vh;
+    grid-template-columns: 45% 55%;
+  }
+
+  .desktop-illustration{
+    top: 6%;
+  }
+
+  .bg-desktop {
+    right: 110%;
+  }
+
+  .box{
+    left: 11%;
+    top: 38%;
+  }
+}

@@ -1,0 +1,29 @@
+details {
+  font: 16px "Open Sans", Calibri, sans-serif;
+  width: 100%;
+  padding: 2%;
+}
+
+details > summary {
+  padding: 2px 6px;
+  width: 100%;
+  /* background-color: #ddd; */
+  background-color: transparent;
+  border: none;
+  /* box-shadow: 1px 1px 1px grey; */
+  cursor: pointer;
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  /* background-color: #ddd; */
+  background-color: transparent;
+  padding: 2px 6px;
+  margin: 0;
+  /* box-shadow: 3px 3px 4px black; */
+}
